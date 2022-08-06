@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>BWS 관리자</title>
+        <!-- icon css -->
+        <link
+            rel="stylesheet"
+            href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+        />
+        <!-- W3 css -->
+        <link
+            rel="stylesheet"
+            href="https://www.w3schools.com/w3css/4/w3.css"
+        />
+
+        <link rel="stylesheet" href="./reset.css" />
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div id="filter-list">
+            <div id="filter-year" class="filter">
+                <div class="filter-content">2022년</div>
+
+                <div id="year-filter-list">
+                    <div class="available-filter">
+                        <div class="available-filter-content">2022년</div>
+                    </div>
+                    <div class="available-filter">
+                        <div class="available-filter-content">2022년</div>
+                    </div>
+                    <div class="available-filter">
+                        <div class="available-filter-content">2022년</div>
+                    </div>
+                    <div class="available-filter">
+                        <div class="available-filter-content">2022년</div>
+                    </div>
+                    <div class="available-filter">
+                        <div class="available-filter-content">2022년</div>
+                    </div>
+                </div>
+
+                <button id="select-year-btn">
+                    <i class="las la-angle-down"></i>
+                </button>
+            </div>
+
+            <div id="add-filter" class="filter">
+                <button id="add-filter-btn">검색조건추가</button>
+                <div id="available-filter-list">
+                    <div class="available-filter">
+                        <div class="available-filter-content">이름</div>
+                        <div class="available-filter-select-list">
+                            <div class="available-filter-search">
+                                <input type="text" />
+                            </div>
+                            <div class="available-filter-select"></div>
+                        </div>
+                    </div>
+                    <div class="available-filter">
+                        <div class="available-filter-content">학년</div>
+                        <div class="available-filter-select-list">
+                            <div class="available-filter-search">
+                                <input type="text" />
+                            </div>
+                            <div class="available-filter-btn-list">
+                                <button class="apply-filter-btn">확인</button>
+                                <button class="cancle-filter-btn">취소</button>
+                            </div>
+                            <div class="available-filter-select">6학년</div>
+                            <div class="available-filter-select">7학년</div>
+                            <div class="available-filter-select">8학년</div>
+                            <div class="available-filter-select">9학년</div>
+                            <div class="available-filter-select">10학년</div>
+                            <div class="available-filter-select">11학년</div>
+                            <div class="available-filter-select">12학년</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter">
+                <div class="filter-content">이메일: 201028@bmrschool.org</div>
+                <button class="remove-filter">
+                    <i class="las la-times"></i>
+                </button>
+            </div>
+        </div>
+        <hr />
+        <div id="table">
+            <table class="w3-table w3-bordered">
+                <tr>
+                    <td id="check-box-head"><input type="checkbox" /></td>
+                    <td id="user-name-head">이름</td>
+                    <td id="user-type-head">분류</td>
+                    <td id="email-head">이메일</td>
+                    <td id="grade-head">학년</td>
+                    <!-- <td id="generation-head"></td> -->
+                    <td id="adviser-head">어드바이저</td>
+                </tr>
+                <tr>
+                    <td class="check-box-row"><input type="checkbox" /></td>
+                    <td class="user-name-row">홍길동</td>
+                    <td class="user-type-row">학생</td>
+                    <td class="email-row">201028@bmrschool.org</td>
+                    <td class="grade-row">12학년</td>
+                    <!-- <td id="generation-head"></td> -->
+                    <td id="adviser-head">정혜은</td>
+                </tr>
+                <tr>
+                    <td class="check-box-row"><input type="checkbox" /></td>
+                    <td class="user-name-row">홍길동</td>
+                    <td class="user-type-row">학생</td>
+                    <td class="email-row">201028@bmrschool.org</td>
+                    <td class="grade-row">12학년</td>
+                    <!-- <td id="generation-head"></td> -->
+                    <td id="adviser-head">정혜은</td>
+                </tr>
+                <tr>
+                    <td class="check-box-row"><input type="checkbox" /></td>
+                    <td class="user-name-row">홍길동</td>
+                    <td class="user-type-row">학생</td>
+                    <td class="email-row">201028@bmrschool.org</td>
+                    <td class="grade-row">12학년</td>
+                    <!-- <td id="generation-head"></td> -->
+                    <td id="adviser-head">정혜은</td>
+                </tr>
+                <tr>
+                    <td class="check-box-row"><input type="checkbox" /></td>
+                    <td class="user-name-row">홍길동</td>
+                    <td class="user-type-row">학생</td>
+                    <td class="email-row">201028@bmrschool.org</td>
+                    <td class="grade-row">12학년</td>
+                    <!-- <td id="generation-head"></td> -->
+                    <td id="adviser-head">정혜은</td>
+                </tr>
+                <tr>
+                    <td class="check-box-row"><input type="checkbox" /></td>
+                    <td class="user-name-row">홍길동</td>
+                    <td class="user-type-row">학생</td>
+                    <td class="email-row">201028@bmrschool.org</td>
+                    <td class="grade-row">12학년</td>
+                    <!-- <td id="generation-head"></td> -->
+                    <td id="adviser-head">정혜은</td>
+                </tr>
+                <tr>
+                    <td class="check-box-row"><input type="checkbox" /></td>
+                    <td class="user-name-row">홍길동</td>
+                    <td class="user-type-row">학생</td>
+                    <td class="email-row">201028@bmrschool.org</td>
+                    <td class="grade-row">12학년</td>
+                    <!-- <td id="generation-head"></td> -->
+                    <td id="adviser-head">정혜은</td>
+                </tr>
+                <tr>
+                    <td class="check-box-row"><input type="checkbox" /></td>
+                    <td class="user-name-row">홍길동</td>
+                    <td class="user-type-row">학생</td>
+                    <td class="email-row">201028@bmrschool.org</td>
+                    <td class="grade-row">12학년</td>
+                    <!-- <td id="generation-head"></td> -->
+                    <td id="adviser-head">정혜은</td>
+                </tr>
+                <tr>
+                    <td class="check-box-row"><input type="checkbox" /></td>
+                    <td class="user-name-row">홍길동</td>
+                    <td class="user-type-row">학생</td>
+                    <td class="email-row">201028@bmrschool.org</td>
+                    <td class="grade-row">12학년</td>
+                    <!-- <td id="generation-head"></td> -->
+                    <td id="adviser-head">정혜은</td>
+                </tr>
+                <tr>
+                    <td class="check-box-row"><input type="checkbox" /></td>
+                    <td class="user-name-row">홍길동</td>
+                    <td class="user-type-row">학생</td>
+                    <td class="email-row">201028@bmrschool.org</td>
+                    <td class="grade-row">12학년</td>
+                    <!-- <td id="generation-head"></td> -->
+                    <td id="adviser-head">정혜은</td>
+                </tr>
+                <tr>
+                    <td class="check-box-row"><input type="checkbox" /></td>
+                    <td class="user-name-row">홍길동</td>
+                    <td class="user-type-row">학생</td>
+                    <td class="email-row">201028@bmrschool.org</td>
+                    <td class="grade-row">12학년</td>
+                    <!-- <td id="generation-head"></td> -->
+                    <td id="adviser-head">정혜은</td>
+                </tr>
+                <tr>
+                    <td class="check-box-row"><input type="checkbox" /></td>
+                    <td class="user-name-row">홍길동</td>
+                    <td class="user-type-row">학생</td>
+                    <td class="email-row">201028@bmrschool.org</td>
+                    <td class="grade-row">12학년</td>
+                    <!-- <td id="generation-head"></td> -->
+                    <td id="adviser-head">정혜은</td>
+                </tr>
+                <tr>
+                    <td class="check-box-row"><input type="checkbox" /></td>
+                    <td class="user-name-row">홍길동</td>
+                    <td class="user-type-row">학생</td>
+                    <td class="email-row">201028@bmrschool.org</td>
+                    <td class="grade-row">12학년</td>
+                    <!-- <td id="generation-head"></td> -->
+                    <td id="adviser-head">정혜은</td>
+                </tr>
+            </table>
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+</html>
