@@ -4,7 +4,11 @@ import { setCookie, deleteCookie } from "./util";
 import { API } from "./api";
 import { State, addState } from "./util/state";
 
+// TODO: 하드코딩에서 Firebase에서 불러오는 걸로 변경.
+
 const PAGES = ["사용자 관리", "백업관리"];
+
+// 사용자 검색시 사용할 필터 정보
 let FILTER_YEAR_VALUES = [];
 const FILTER_TYPES = ["name", "type", "email", "grade", "adviser"];
 const FILTER_NAMES = ["이름", "종류", "이메일", "학년", "어드바이저"];
@@ -63,6 +67,7 @@ async function renderPage() {
         };
     });
 
+    // 필터 정보 세팅
     FILTER_VALUES.adviser = userList
         .filter((user) => user.type == "교사")
         .map((user) => user.name);
@@ -77,6 +82,7 @@ async function renderPage() {
     }
     FILTER_YEAR_VALUES = years;
 
+    // 화면 렌더링
     let $heading = Heading(State, PAGES);
     let $controls = Controls(State, userList);
     let $filter = Filter(State, {
